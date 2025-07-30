@@ -17,7 +17,7 @@ export default function ImageCard({ title, imageUrl, to, onClick }: ImageCardPro
         alt={title}
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
-      <div className="absolute bottom-0 w-full bg-black bg-opacity-60 text-white text-center py-2 text-sm font-semibold">
+      <div className="absolute bottom-0 w-full bg-gray  text-black text-center py-2 text-sm font-semibold">
         {title}
       </div>
     </div>
