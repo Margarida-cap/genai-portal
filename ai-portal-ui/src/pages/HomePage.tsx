@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import type { Project } from "../types";
 import ImageCard from "../components/ImageCard";
 import Contact from "../components/Contact";
-import SlideshowCarousel from "../components/SlideshowCarousel";
-import PdfSlideshow from "@/components/PdfSlideshow";
 import PdfSlideshowDialog from "@/components/PdfSlideshowDialog";
 
 export default function HomePage() {
@@ -21,9 +19,17 @@ export default function HomePage() {
         {
             id: "2",
             title: "Cobol Transpiler",
-            description: "A tool that transpiles Cobol code into other languages. ",
+            description: "The transpiler is an automated tool for translating COBOL Hogan programs into Java, leveraging Azure OpenAI models. This solution is designed to modernize COBOL codebases, streamline migration processes, and facilitate integration with contemporary software environments. The system supports both batch and interactive workflows, enabling users to process multiple COBOL files, validate outputs, and generate explanations for the translated code.",
             imageUrl: "/images/cbl-icon.png",
-            videoUrl: "",
+            features: [
+                "Automated COBOL to Java/C# code translation", "Integration with Azure OpenAI for intelligent code transformation",
+                "Output validation and consistency checks", "Code explanation generation for translated logic"],
+            benefits: [
+                "Accelerated legacy modernization", "Improved maintainability of modernized code",
+                "Enhanced understanding of legacy logic via AI-generated explanations", "Seamless integration with modern development pipelines",
+                "Cost savings on long-term COBOL maintenance", "Increased developer productivity and onboarding speed"
+            ],
+            videoUrl: "/videos/cobol.mp4",
         },
         {
             id: "3",
@@ -90,7 +96,7 @@ export default function HomePage() {
                                 For an overview of ... click the button below.
                             </p>
                             <PdfSlideshowDialog file="GenAI-GADM-BlueBook-v1.1.pdf" buttonLabel="Open Slideshow Explination" />
-                            
+
                             {/* <SlideshowCarousel images={pptSlides} buttonLabel="Click to view Slideshow" /> */}
                         </div>
 
