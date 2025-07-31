@@ -11,8 +11,18 @@ export default function HomePage() {
             id: "1",
             title: "KM Agent",
             description: "The KM agent allows the user to ask natural language questions to a chatbot interface about a large stockpile of loaded documents, lowering the amount of time it takes to find relevant information on various subjects. This project is a Flask-based API and a set of scripts for processing and embedding documents.",
-            features: ["Vector Database", "RAG", "OpenAI's o1"],
-            benefits: ["Decreased time finding relevant information."],
+            features: [
+                "Chatbot Interface",
+                "Document processing",
+                "Gen-Ai Powered Search",
+                "Flask API ", 
+            ],
+            benefits: [
+                "Accelerated knowledge retrieval",
+                "Time efficiency",
+                "Centralized knowledge access",
+                "Reduces human error ",
+            ],
             imageUrl: "/images/km-icon.png",
             videoUrl: "/videos/km-agents.mp4",
         },
@@ -29,6 +39,7 @@ export default function HomePage() {
                 "Enhanced understanding of legacy logic via AI-generated explanations", "Seamless integration with modern development pipelines",
                 "Cost savings on long-term COBOL maintenance", "Increased developer productivity and onboarding speed"
             ],
+            
             videoUrl: "/videos/cobol.mp4",
         },
         {
@@ -41,7 +52,21 @@ export default function HomePage() {
         {
             id: "4",
             title: "Reverse Engineering",
-            description: "A automatic documentation tool.",
+            description: "The Reverse Engineering is an AI-powered solution that automatically generates technical documentation from source code. This tool saves developers countless hours by transforming complex codebases into comprehensive, readable documentation.",
+            features: [
+                "Process entire code repositories in one go", 
+                "Understand dependencies between classes", 
+                "Generate consolidated documentation that's actually useful for developers",
+                "Supports multiple programing languagues", 
+                "Generates several types of documentation for multiple purposes"
+            ],
+            benefits: [
+                "Accelerating developer onboarding by providing immediate insight into unfamiliar code.",
+                "Preserving institutional knowledge when experienced team members leave.",
+                "Supporting compliance requirements in regulated industries by generating standardized documentation.",
+                "Enabling smoother legacy system modernization by documenting outdated systems.",
+                "Improving code quality by making technical debt and architectural issues more visible.",
+            ],
             imageUrl: "/images/re-icon.png",
             videoUrl: "/videos/reverse-eng.mp4",
         }
@@ -95,7 +120,7 @@ export default function HomePage() {
                                 This portal showcases the GenAI projects developed by Capgemini Portugal.
                                 For an overview of ... click the button below.
                             </p>
-                            <PdfSlideshowDialog file="GenAI-GADM-BlueBook-v1.1.pdf" buttonLabel="Open Slideshow Explination" />
+                            <PdfSlideshowDialog file="GenAI-GADM-BlueBook-v1.1.pdf" buttonLabel="Open Slideshow Explanation" />
 
                             {/* <SlideshowCarousel images={pptSlides} buttonLabel="Click to view Slideshow" /> */}
                         </div>
