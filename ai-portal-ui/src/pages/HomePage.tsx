@@ -3,9 +3,11 @@ import type { Project } from "../types";
 import ImageCard from "../components/ImageCard";
 import Contact from "../components/Contact";
 import SlideshowCarousel from "../components/SlideshowCarousel";
+import PdfSlideshow from "@/components/PdfSlideshow";
+import PdfSlideshowDialog from "@/components/PdfSlideshowDialog";
 
 export default function HomePage() {
-    
+
     const projects: Project[] = [
         {
             id: "1",
@@ -55,11 +57,11 @@ export default function HomePage() {
             imageUrl: "/images/default-avatar.png",
         }
     ];
-    const pptSlides = [
-        "/slides/slide1.png",
-        "/slides/slide2.png",
-        "/slides/slide3.png",
-    ];
+    // const pptSlides = [
+    //     "/slides/slide1.png",
+    //     "/slides/slide2.png",
+    //     "/slides/slide3.png",
+    // ];
 
     return (
         <>
@@ -73,7 +75,7 @@ export default function HomePage() {
                     />
                 </div>
             </header>
-            
+
 
 
             {/* ✅ Main Content */}
@@ -83,11 +85,13 @@ export default function HomePage() {
                     <aside className="w-full md:w-[380px] flex-shrink-0 space-y-6">
                         <div className="bg-white shadow rounded p-4">
                             <h2 className="text-lg font-semibold mb-2">Overview</h2>
-                            <p className="text-sm text-gray-700">
+                            <p className="text-sm text-gray-700 mb-4">
                                 This portal showcases the GenAI projects developed by Capgemini Portugal.
                                 For an overview of ... click the button below.
                             </p>
-                            <SlideshowCarousel images={pptSlides} buttonLabel="Click to view Slideshow" />
+                            <PdfSlideshowDialog file="GenAI-GADM-BlueBook-v1.1.pdf" buttonLabel="Open Slideshow Explination" />
+                            
+                            {/* <SlideshowCarousel images={pptSlides} buttonLabel="Click to view Slideshow" /> */}
                         </div>
 
                         <div className="bg-white shadow rounded p-4 space-y-3">

@@ -9,11 +9,15 @@ export default function ProjectPage() {
 
   if (!project) {
     return (
-      <div className="p-6">
+      <div className="m-10">
         <p>Project not found.</p>
-        <button onClick={() => navigate("/")} className="text-blue-600 underline">
-          Go Home
-        </button>
+        <div className="group py-2 flex flex-inline hover:text-gray-800">
+          <button onClick={() => navigate("/")} className="text-black-600 underline flex flex-inline">
+            <ArrowLeft className="transition-transform duration-200 group-hover:-translate-x-1" />
+            <p className="underline ">Go home</p>
+          </button>
+
+        </div>
       </div>
     );
   }
