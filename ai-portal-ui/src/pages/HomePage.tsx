@@ -5,34 +5,37 @@ import Contact from "../components/Contact";
 import SlideshowCarousel from "../components/SlideshowCarousel";
 
 export default function HomePage() {
+    
     const projects: Project[] = [
         {
             id: "1",
             title: "KM Agent",
-            description: "An AI assistant.",
-            imageUrl: "/images/placeholder.jpg",
+            description: "The KM agent allows the user to ask natural language questions to a chatbot interface about a large stockpile of loaded documents, lowering the amount of time it takes to find relevant information on various subjects. This project is a Flask-based API and a set of scripts for processing and embedding documents.",
+            features: ["Vector Database", "RAG", "OpenAI's o1"],
+            benefits: ["Decreased time finding relevant information."],
+            imageUrl: "/images/km-icon.png",
             videoUrl: "/videos/km-agents.mp4",
         },
         {
             id: "2",
             title: "Cobol Transpiler",
-            description: "An AI assistant.",
-            imageUrl: "/images/placeholder.jpg",
-            videoUrl: "https://yourstorage.blob.core.windows.net/videos/chatbot.mp4",
+            description: "A tool that transpiles Cobol code into other languages. ",
+            imageUrl: "/images/cbl-icon.png",
+            videoUrl: "",
         },
         {
             id: "3",
             title: "VB6 to .Net",
-            description: "An AI assistant.",
+            description: "A tool to translate VB6 to .Net.",
             imageUrl: "/images/placeholder.jpg",
-            videoUrl: "/videos/km-agents.mp4",
+            videoUrl: "",
         },
         {
             id: "4",
             title: "Reverse Engineering",
-            description: "An AI assistant.",
-            imageUrl: "/images/placeholder.jpg",
-            videoUrl: "https://yourstorage.blob.core.windows.net/videos/chatbot.mp4",
+            description: "A automatic documentation tool.",
+            imageUrl: "/images/re-icon.png",
+            videoUrl: "/videos/reverse-eng.mp4",
         }
     ];
     const contacts = [
@@ -60,12 +63,18 @@ export default function HomePage() {
 
     return (
         <>
-            {/* ✅ Header */}
             <header className="w-full bg-white shadow">
-                <div className="max-w-screen-xl mx-auto px-6 py-4">
+                <div className="max-w-screen-xl mx-auto px-6 flex items-center justify-between">
                     <h1 className="text-2xl font-bold text-gray-800">Cap GenAI Portal</h1>
+                    <img
+                        src="/images/logo-cap.png"
+                        alt="Capgemini Logo"
+                        className="h-20 w-auto"
+                    />
                 </div>
             </header>
+            
+
 
             {/* ✅ Main Content */}
             <main className="max-w-screen-xl mx-auto p-6 min-h-screen">
@@ -78,7 +87,7 @@ export default function HomePage() {
                                 This portal showcases the GenAI projects developed by Capgemini Portugal.
                                 For an overview of ... click the button below.
                             </p>
-                            <SlideshowCarousel images={pptSlides} buttonLabel="View Slides" />
+                            <SlideshowCarousel images={pptSlides} buttonLabel="Click to view Slideshow" />
                         </div>
 
                         <div className="bg-white shadow rounded p-4 space-y-3">

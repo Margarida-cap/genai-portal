@@ -9,6 +9,8 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl: string;  // for gallery
-  videoUrl: string;  // for demo
+  features?: string[];
+  benefits?: string[];
+  imageUrl: string; 
+  videoUrl: string; 
 }

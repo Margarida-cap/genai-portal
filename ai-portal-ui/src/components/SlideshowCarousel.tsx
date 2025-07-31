@@ -25,7 +25,7 @@ export default function SlideshowCarousel({ images, buttonLabel = "View Slidesho
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">{buttonLabel}</Button>
+        <Button variant="outline" className="my-4">{buttonLabel}</Button>
       </DialogTrigger>
 
       <DialogContent className="max-w-3xl w-full">
